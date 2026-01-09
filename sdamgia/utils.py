@@ -7,7 +7,7 @@ from .types import Problem, _base_url
 
 def base_url(gia_type: GiaType, subject: Subject) -> str:
     """Create base url for certain GIA type and subject."""
-    return _base_url(gia_type=gia_type, subject=subject)
+    return _base_url(gia_type=gia_type.value, subject=subject.value)
 
 
 def create_pdf_from_html(html: str, output_file_path: str) -> None:
